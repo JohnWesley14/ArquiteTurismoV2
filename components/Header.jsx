@@ -31,6 +31,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 20,
     alignItems: 'flex-end',
+    marginBottom: 10,
     
   },
   secaoDivs:{
@@ -50,7 +51,7 @@ const style = StyleSheet.create({
    flexDirection: 'row',
    alignItems: 'center',
    borderWidth: 2,
-   borderColor: '#FFF',
+   borderColor: '#20232a',
    borderRadius: 10,
     
   },

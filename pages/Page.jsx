@@ -8,12 +8,12 @@ import React from 'react'
 const Page = () => {
   return (
     <View style={styles.container}>
-      <TextHeader />
+      
           
       <View style={styles.divImage}>
         
         
-        <List />
+       
         
       </View>
       
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    backgroundColor: 'gray',
+    backgroundColor: '#0F0F0F',
     
     
   }

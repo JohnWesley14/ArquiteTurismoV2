@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Card from '../components/Card'
 import ListOfCards from '../components/ListOfCards'
 import ArthurAzevedo from './LocalList/ArthurAzevedo'
+import Modal from '../components/Modal'
 
 const Home = ({ navigation}) => {
   
