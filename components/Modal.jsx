@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Button, Text, StyleSheet } from 'react-native'
 
-const Modal = () => {
+const ModalScreen = ({ navigation }) => {
   return (
-    <View>
-      <Text>Modal</Text>
+    <View style={{zIndex: 99, flex: 1, alignItems: 'center', justifyContent: 'center' , position: 'absolute', width: 200, right: -80,top: 60, overflow: 'hidden'}}>
+      <View style={{ backgroundColor: 'white', padding: 20 }}>
+        <Text style={{ fontSize: 20, marginBottom: 10 }}>Modal Content</Text>
+        <Button title="Fechar Modal" onPress={() => navigation.goBack()} />
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default Modal
+
+export default ModalScreen

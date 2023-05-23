@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Buttons from '../../components/Buttons'
 import ListOfButtons from '../../components/ListOfButtons'
 
-const ArthurAzevedo = ( ) => {
+const Palacio = ( ) => {
   
   return (
    <SafeAreaView style={style.divTeatro}>
@@ -15,9 +15,9 @@ const ArthurAzevedo = ( ) => {
       
          <View style={style.divCard} >
             <View style={style.infoPrincipal}>
-               <Text style={style.heading}>Teatro Arthur Azevedo</Text>
-               <Image source={require('./../../images/arthuraz.jpg')} style={style.image}/>
-               <Text style={style.description}>O teatro conta com várias atrações, como por exemplo o incrível acervo de apresentações durante o dia, que cativa os turistas a virem visitá-lo.</Text>
+               <Text style={style.heading}>Palácio dos Leões</Text>
+               <Image source={require('./../../images/palacio.jpg')} style={style.image}/>
+               <Text style={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quia, voluptas, labore a voluptate in suscipit odit maxime accusantium iste iusto veniam debitis beatae! Corporis, in. Dolorem rerum exercitationem praesentium molestias eum quo quidem asperiores sit vero! Recusandae iure numquam dicta natus suscipit fuga ipsa at! Fugit esse architecto ipsum..</Text>
             </View>
             
             <View style={style.listButtons}>
@@ -47,7 +47,6 @@ const style = StyleSheet.create({
       borderRadius: 10,
       minHeight: 600,
       alignItems: 'center',
-      
    },
    image:{
       maxWidth: '100%',
@@ -81,4 +80,4 @@ const style = StyleSheet.create({
    }
    
 })
-export default ArthurAzevedo
+export default Palacio

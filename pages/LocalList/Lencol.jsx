@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Buttons from '../../components/Buttons'
 import ListOfButtons from '../../components/ListOfButtons'
 
-const ArthurAzevedo = ( ) => {
+const Lencol = ( ) => {
   
   return (
    <SafeAreaView style={style.divTeatro}>
@@ -15,9 +15,9 @@ const ArthurAzevedo = ( ) => {
       
          <View style={style.divCard} >
             <View style={style.infoPrincipal}>
-               <Text style={style.heading}>Teatro Arthur Azevedo</Text>
-               <Image source={require('./../../images/arthuraz.jpg')} style={style.image}/>
-               <Text style={style.description}>O teatro conta com várias atrações, como por exemplo o incrível acervo de apresentações durante o dia, que cativa os turistas a virem visitá-lo.</Text>
+               <Text style={style.heading}>Lençóis Maranhenses</Text>
+               <Image source={require('./../../images/lencol.jpg')} style={style.image}/>
+               <Text style={style.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium veritatis architecto minima rem labore fuga eaque. Hic tempore maxime dolores officia labore animi praesentium fugit? Ipsam quia nam molestias praesentium officia, aliquam atque quis commodi debitis! Incidunt animi deleniti, ducimus maiores reprehenderit doloremque aliquid quas voluptates veritatis odit possimus. Totam!</Text>
             </View>
             
             <View style={style.listButtons}>
@@ -47,7 +47,6 @@ const style = StyleSheet.create({
       borderRadius: 10,
       minHeight: 600,
       alignItems: 'center',
-      
    },
    image:{
       maxWidth: '100%',
@@ -81,4 +80,4 @@ const style = StyleSheet.create({
    }
    
 })
-export default ArthurAzevedo
+export default Lencol

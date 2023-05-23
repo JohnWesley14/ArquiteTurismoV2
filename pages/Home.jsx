@@ -1,25 +1,21 @@
-import { View,StyleSheet, StatusBar, SafeAreaView } from 'react-native'
+import { StyleSheet, StatusBar, SafeAreaView } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
-import Card from '../components/Card'
 import ListOfCards from '../components/ListOfCards'
-import ArthurAzevedo from './LocalList/ArthurAzevedo'
-import Modal from '../components/Modal'
 
-const Home = ({ navigation}) => {
+
+const Home = ({ navigation, }) => {
   
   return (
     <SafeAreaView style={styles.container}>
       
       <Header style={styles.headerFixed}/>
-      <ListOfCards/>
+      <ListOfCards />
       <StatusBar
         animated={true}
         backgroundColor="#0F0F0F"
-        
-        
-      
       />
+      
       
       
       
@@ -39,6 +35,7 @@ const styles = StyleSheet.create({
    },
    headerFixed:{
     marginTop: 30,
+    zIndex: 99
     
    }
 })

@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-const Card = ({ heading, nameImage, desc } ) => {
+const Card = ({ heading, nameImage, desc, nameOfRedirect } ) => {
   const navigation = useNavigation()
 
 
@@ -12,7 +12,7 @@ const Card = ({ heading, nameImage, desc } ) => {
    
   }
   return (
-   <TouchableOpacity onPress={() => navigation.navigate('Teatro')}>
+   <TouchableOpacity style={{zIndex:0}} onPress={() => navigation.navigate(nameOfRedirect)}>
       <View style={style.divCard} >
       
          <Text style={style.heading}>{heading}</Text>
@@ -36,6 +36,7 @@ const style = StyleSheet.create({
       minHeight: 400,
       alignItems: 'center',
       justifyContent: 'center',
+      zIndex: 0,
       
    },
    image:{

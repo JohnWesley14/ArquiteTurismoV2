@@ -1,9 +1,21 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'; 
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import ModalScreen from './Modal';
+
+
 
 const Header = () => {
+  const navigation = useNavigation()
+  const [modalVisibility, setModalVisibility] = useState(false)
+
+  const toggle = () => {
+    return setModalVisibility(!modalVisibility)
+  }
+  
+
   return (
     <View style={style.header}>
       <View style={style.secaoDivs}> 
@@ -12,14 +24,21 @@ const Header = () => {
           <Image style={style.image} source={require('./../images/logo.png')}/>
           <Text style={style.texto}>ArquiteTurismoMa</Text>
         </View>
-
+        
         <View style={style.divRight}>
-          <Image source={require('./../images/person.png')} />
+          <TouchableOpacity style={{position: 'relative'}} onPress={() => console.log('Click')}>
+            
+            <Image source={require('./../images/person.png')} />
+            {modalVisibility ? <ModalScreen /> : null}
+
+            
+
+          </TouchableOpacity>
           <AntDesign name="search1" size={24} color="white" />
         </View> 
 
       </View>
-      
+
       
     </View>
   )
@@ -32,6 +51,7 @@ const style = StyleSheet.create({
     marginTop: 20,
     alignItems: 'flex-end',
     marginBottom: 10,
+    marginBottom: 50,
     
   },
   secaoDivs:{
@@ -66,15 +86,16 @@ const style = StyleSheet.create({
   },
   divRight:{
    
-    
+   zIndex: 99,
    flexDirection: 'row',
    alignItems: 'center',
    justifyContent: 'center',
    display: 'flex',
    gap: 25,
-    
+   marginRight: 30,
   },
   
 })
 
 export default Header
+
