@@ -25,12 +25,12 @@ function Routes() {
     <NavigationContainer >
 
       <Tab.Navigator screenOptions={{tabBarStyle: {backgroundColor: 'black', paddingTop: 10, borderWidth: 0,}}} initialRouteName='Home' >
-        {/* <Tab.Screen name="Page" component={Page} options={{title: "Favoritos", headerShown: false, 
+        <Tab.Screen name="Page" component={Page} options={{title: "Favoritos", headerShown: false, 
         tabBarIcon: () =>(
           <Fontisto name="heart" size={20} color="white" />
         )}
         
-        }/> */}
+        }/> 
         <Tab.Screen name="Home" component={Home} options={{title: "Home", headerShown: false,
       tabBarIcon: () =>(
         <Entypo name="home" size={24} color="white"/>

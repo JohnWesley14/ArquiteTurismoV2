@@ -15,7 +15,7 @@ const ArthurAzevedo = ( ) => {
       
          <View style={style.divCard} >
             <View style={style.infoPrincipal}>
-               <Text style={style.heading}>Teatro Arthur Azevedo</Text>
+               <Text style={style.heading}>Reciclar papel</Text>
                <Image source={require('./../../images/arthuraz.jpg')} style={style.image}/>
                <Text style={style.description}>O teatro conta com várias atrações, como por exemplo o incrível acervo de apresentações durante o dia, que cativa os turistas a virem visitá-lo.</Text>
             </View>

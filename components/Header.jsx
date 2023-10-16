@@ -22,7 +22,7 @@ const Header = () => {
 
         <View style={style.divLogo}>
           <Image style={style.image} source={require('./../images/logo.png')}/>
-          <Text style={style.texto}>ArquiteTurismoMa</Text>
+          <Text style={style.texto}>Projeto Integrador</Text>
         </View>
         
         <View style={style.divRight}>
