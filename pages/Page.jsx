@@ -12,16 +12,7 @@ const Page = () => {
     valorLongitude = -44.24195170431791
   }
 
-  const locations = {
-    latitudes:{
-      latitudeInicial: -2.531315934970209,
-      latitudeFinal: valorLatitude
-    },
-    longitude:{
-      longitudeInicial: -44.301393451251556,
-      longitudeFinal: valorLongitude
-    }
-  }
+  
   //ripel -2.5535678110698923, -44.24195170431791
   return (
     <View style={styles.container}>

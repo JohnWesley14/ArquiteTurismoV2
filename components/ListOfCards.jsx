@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet, ScrollView} from 'react-native'
+import { View, Text, StyleSheet, ScrollView, FlatList, SafeAreaView} from 'react-native'
 import React from 'react'
 import Card from './Card'
-
+import { info } from '../data/data'
 const ListOfCards = () => {
   imagens ={
    
@@ -20,19 +20,27 @@ const ListOfCards = () => {
 
   }
   return (
-    <ScrollView contentContainerStyle={{zIndex: 0, marginTop: 10}}>
-      <View style={style.container}>
-      
-        <Card heading={"Reciclar papel"} nameOfRedirect={"Teatro"} nameImage={imagensIntegrador.papel} desc={"Localizado em São Luis, o teatro conta com vários destaques, como por exemplo o incrível... Ler Mais"}/>
+    // <ScrollView contentContainerStyle={{zIndex: 0, marginTop: 10}}>
+    //   <View style={style.container}>
+        
+    //     <Card heading={info.paper.title} nameOfRedirect={"Teatro"} nameImage={info.paper.image} desc={info.paper.descricao}/>
 
      
       
-        <Card heading={"Reciclar lixo orgânico"} nameImage={imagensIntegrador.organico} nameOfRedirect={"Centro"} desc={"Este local é encantador devido a sua incrível arquitetura de casas e prédios históricos e.... Ler Mais"}/>
-        <Card heading={"Reciclar vidro"} nameImage={imagensIntegrador.vidro} nameOfRedirect={"Lencol"} desc={"Este local é encantador devido a sua incrível arquitetura de casas e prédios históricos e.... Ler Mais"}/>
-        <Card heading={"Palácio dos Leões"} nameImage={imagens.palacio} nameOfRedirect={"Palacio"} desc={"Este local é encantador devido a sua incrível arquitetura de casas e prédios históricos e.... Ler Mais"}/>
+    //     <Card heading={info.organic.title} nameImage={info.organic.image} nameOfRedirect={"Centro"} desc={info.organic.descricao}/>
+    //     <Card heading={info.glass.title} nameImage={info.glass.image} nameOfRedirect={"Lencol"} desc={info.glass.descricao}/>
+    //     <Card heading={"Palácio dos Leões"} nameImage={imagens.palacio} nameOfRedirect={"Palacio"} desc={"Este local é encantador devido a sua incrível arquitetura de casas e prédios históricos e.... Ler Mais"}/>
       
-      </View>
-    </ScrollView>
+    //   </View>
+    // </ScrollView>
+    <SafeAreaView>
+      <FlatList
+        data={info}
+        renderItem={({item}) => <Card heading={item.title} nameImage={item.image} desc={item.descricao} nameOfRedirect={item} />}
+        keyExtractor={item => item.id}
+    />
+    </SafeAreaView>
+    
   )
 }
 const style = StyleSheet.create({
